@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namra Naeem - Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    .contact p {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact a {
+  font-size: 16px;
+  color: #0077b5;   /* blue color */
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+    .contact a:hover {
+      color: #0077b5;
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-top: 25px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      letter-spacing: 1px;
+    }
+
+    ul { margin-left: 20px; }
+
+    li { margin: 5px 0; }
+
+    .section {
+      margin-top: 15px;
+    }
+
+    .fade-in {
+      animation: fade 1s ease-in;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .header { flex-direction: column; align-items: flex-start; }
+      .header img { margin-top: 20px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container fade-in">
+
+  <div class="header">
+    <div>
+      <h1>NAMRA NAEEM</h1>
+      <div class="contact">
+        <p><a href="mailto:namranaeem24@gmail.com">namranaeem24@gmail.com</a></p>
+        <p>8368530189</p>
+        <p>Bareilly, Uttar Pradesh</p>
+        <p><a href="https://linkedin.com/in/namra-naeem-100929323" target="_blank">LinkedIn Profile</a></p>
+      </div>
+    </div>
+
+    <!-- ADD YOUR IMAGE FILE NAME HERE -->
+    <img src="profile.jpg" alt="Profile Photo">
+  </div>
+
+  <div class="section">
+    <h2>SUMMARY</h2>
+    <p>Motivated BCA (AI) student with a strong interest in web development and artificial intelligence. Proficient in coding fundamentals and fluent
+in English, with the ability to communicate ideas clearly. Possesses a solid foundation in problem-solving and a keen willingness to learn and apply technical skills in real-world projects.</p>
+  </div>
+
+  <div class="section">
+    <h2>SKILLS</h2>
+    <ul>
+      <li>Python</li>
+      <li>C</li>
+      <li>Java</li>
+      <li>HTML & CSS</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>EDUCATION</h2>
+    <ul>
+      <li>BCA (AI) | Invertis University, Bareilly | Currently pursuing {2nd year}</li>
+      <li>Class 12 | 70% | 2024 | Bareilly</li>
+      <li>Class 10 | 85% | 2022 | Delhi</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>ADDITIONAL INFORMATION</h2>
+    <ul>
+      <li><strong>Languages:</strong> English (fluent) , Hindi</li>
+      <li><strong>Communication Skills:</strong> Effective communicator with strong interpersonal skills and English fluency. Skilled in conveying
+complex ideas clearly, active listening, and building effective
+collaboration within team settings.</li>
+      <li><strong>Activities:</strong> Volleyball & Badminton</li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>
