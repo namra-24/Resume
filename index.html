@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namra Naeem Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Georgia',serif;
+  background:linear-gradient(135deg,#e0eafc,#cfdef3);
+  color:#222;
+  transition:0.3s;
+}
+
+.dark-mode{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#eee;
+}
+
+.container{
+  max-width:1000px;
+  margin:40px auto;
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.2);
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+.dark-mode .container{
+  background:rgba(0,0,0,0.3);
+}
+
+.header{display:flex;justify-content:space-between;align-items:center}
+
+.header img{
+  width:200px;height:250px;border-radius:15px;object-fit:cover;
+}
+
+h1{font-size:42px}
+
+.contact a{
+  display:block;
+  color:black;
+  text-decoration:none;
+  margin-top:5px;
+}
+
+.dark-mode .contact a{
+  color:white;
+}
+
+.contact a:hover{color:#0077b5}
+
+.contact a:hover{color:#0077b5}
+
+h2{margin-top:25px;border-bottom:2px solid #333}
+
+.two-column{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+ul{margin-left:20px}
+
+.card{
+  padding:15px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.25);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.dark-mode .card{
+  background:rgba(0,0,0,0.3);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.toggle-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  padding:10px 15px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  z-index:1000;
+}
+
+.download-btn{
+  position:fixed;
+  top:20px;
+  right:180px;
+  padding:10px 15px;
+  background:#0077b5;
+  color:white;
+  border-radius:20px;
+  text-decoration:none;
+  z-index:1000;
+}
+
+.fade-in{animation:fade 1s ease-in}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:700px){
+  .header{flex-direction:column}
+  .two-column{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle-btn" id="modeBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+<a href="resume.pdf" download="Namra_Naeem_Resume.pdf" class="download-btn">
+  <i class="fa fa-download"></i> Download Resume
+</a>
+
+<div class="container fade-in">
+
+<div class="header">
+<div>
+<h1>NAMRA NAEEM</h1>
+<div class="contact">
+<a href="mailto:namranaeem24@gmail.com"><i class="fa fa-envelope"></i> namranaeem24@gmail.com</a>
+<p>8368530189</p>
+<p>Bareilly, Uttar Pradesh</p>
+<a href="https://linkedin.com/in/namra-naeem-100929323" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://github.com/namra-24" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+</div>
+</div>
+<img src="profile.jpg">
+</div>
+
+<h2>SUMMARY</h2>
+<p>Motivated BCA (AI) student with a strong interest in web development and artificial intelligence. Proficient in coding fundamentals and fluent in English, with the ability to communicate ideas clearly. Possesses a solid foundation in problem-solving and a keen willingness to learn and apply technical skills in real-world projects.</p>
+
+<div class="two-column">
+
+<div>
+<h2>SKILLS</h2>
+<div class="card">
+<ul>
+<li>🐍 Python</li>
+<li>💻 C</li>
+<li>☕ Java</li>
+<li>🌐 HTML & CSS</li>
+<li>📊 Power BI</li>
+<li>📈 Excel</li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>PROJECTS</h2>
+<div class="card">
+<ul>
+<li><b>KBC Quiz Game:</b> Designed quiz application with game logic, score tracking, and audio feedback for correct/incorrect answers.</li>
+<li><b>Student Management System:</b> Developed application to efficiently manage student data and records.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<h2>EDUCATION</h2>
+<div class="card">
+<ul>
+<li>BCA (AI) | Invertis University, Bareilly | Currently pursuing {2nd year}</li>
+<li>Class 12 | 70% | 2024 | Bareilly</li>
+<li>Class 10 | 85% | 2022 | Delhi</li>
+</ul>
+</div>
+
+<h2>ADDITIONAL INFORMATION</h2>
+<div class="card">
+<ul>
+<li><b>Languages:</b> English (fluent) , Hindi</li>
+<li><b>Communication Skills:</b> Effective communicator with strong interpersonal skills and English fluency. Skilled in conveying complex ideas clearly, active listening, and building effective collaboration within team settings.</li>
+<li><b>Problem-solving skills:</b> Applied strong problem-solving skills to analyze complex issues and implement efficient, practical solutions.</li>
+<li><b>Activities:</b> Volleyball & Badminton</li>
+</ul>
+</div>
+
+</div>
+
+<script>
+function toggleDarkMode(){
+  const body=document.body;
+  const btn=document.getElementById('modeBtn');
+  body.classList.toggle('dark-mode');
+  if(body.classList.contains('dark-mode')){
+    btn.innerHTML='☀️ Light Mode';
+  }else{
+    btn.innerHTML='🌙 Dark Mode';
+  }
+}
+</script>
+
+</body>
+</html>
