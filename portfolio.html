@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namra Naeem Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#111;transition:0.3s}
+
+.dark-mode{background:#1e1e2f;color:#f5f5f5}
+
+section{padding:28px 6%;transition:0.6s}
+
+.navbar{position:fixed;width:100%;top:0;display:flex;justify-content:space-between;padding:10px 6%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:1000}
+.dark-mode .navbar{background:#2c2c3a}
+
+.navbar a{color:#111;text-decoration:none;margin-left:15px;position:relative}
+.dark-mode .navbar a{color:#fff}
+
+.navbar a::after{content:'';position:absolute;width:0;height:2px;background:#f8a5c2;left:0;bottom:-3px;transition:0.3s}
+.navbar a:hover::after{width:100%}
+
+.toggle-btn{cursor:pointer;padding:6px 12px;border-radius:20px;border:2px solid #f8a5c2;background:#000;color:#fff}
+.dark-mode .toggle-btn{background:#fff;color:#000}
+
+.hero{display:flex;justify-content:space-between;align-items:center;min-height:75vh}
+.hero img{width:200px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+
+h1{transition:0.3s}
+.dark-mode h1{color:#f8a5c2}
+
+h2{transition:0.3s;cursor:pointer}
+h2:hover{color:#f8a5c2}
+
+.btn{display:inline-block;margin-top:10px;padding:8px 18px;background:#f8a5c2;color:#fff;border-radius:20px;text-decoration:none}
+
+.skills-tabs{display:flex;flex-wrap:wrap;gap:10px}
+.tab{padding:10px 18px;border-radius:20px;background:#fce7f3;cursor:pointer;border:2px solid #f8a5c2;transition:0.3s}
+.tab:hover{background:#f8a5c2}
+
+.skill-box{display:none;margin-top:8px;padding:10px;border-radius:15px;background:#fff0f6;gap:6px;flex-wrap:wrap;width:fit-content}
+.tab:hover + .skill-box{display:flex}
+
+/* Dark Mode Specific Skills Styling */
+.dark-mode .tab {background:#f8a5c2; color:#000; border:2px solid #f8a5c2}
+.dark-mode .skill-box {background:#f8a5c2; color:#000}
+.dark-mode .skill {border:2px solid #000; color:#000}
+
+/* 2-row layout fix */
+.skill-box{
+  display:none;
+  flex-wrap:wrap;
+  max-width:220px;
+}
+.skill-box .skill{flex:1 1 45%}
+
+.skill{padding:5px 10px;border-radius:10px;border:2px solid #f8a5c2}
+
+.card{background:#fff0f6;padding:10px;border-radius:10px;margin-bottom:8px}
+.dark-mode .card{background:#2a2a40;color:#f5f5f5}
+
+.contact a,.contact p{margin:4px 0;display:block;color:#111;text-decoration:none;transition:0.3s}
+.dark-mode .contact a,.dark-mode .contact p{color:#f5f5f5}
+
+.contact a:hover,.contact p:hover{color:#f8a5c2}
+
+.fade{opacity:0;transform:translateY(20px)}
+.show{opacity:1 !important;transform:translateY(0) !important;transition:0.6s}
+
+footer{text-align:center;padding:8px}
+
+@media(max-width:768px){.hero{flex-direction:column;text-align:center}}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<h2>Namra</h2>
+<div>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<button class="toggle-btn" id="modeBtn" onclick="toggleMode()">🌙 Dark Mode</button>
+</div>
+</div>
+
+<section class="hero fade">
+<div>
+<h1>NAMRA NAEEM</h1>
+<p>Motivated BCA (AI) student with a strong interest in web development and artificial intelligence. Proficient in coding fundamentals and fluent in English, with the ability to communicate ideas clearly. Possesses a solid foundation in problem-solving and a keen willingness to learn and apply technical skills in real-world projects.</p>
+<a href="resume.pdf" download class="btn">Download Resume</a>
+</div>
+<img src="profile.jpg">
+</section>
+
+<section id="skills" class="fade">
+<h2>Tools & Technologies</h2>
+<div class="skills-tabs">
+<div><div class="tab">Languages</div><div class="skill-box"><div class="skill">🐍 Python</div><div class="skill">💻 C</div><div class="skill">☕ Java</div><div class="skill">🟨 JavaScript</div></div></div>
+<div><div class="tab">Frontend</div><div class="skill-box"><div class="skill">🌐 HTML</div><div class="skill">🎨 CSS</div></div></div>
+<div><div class="tab">Databases</div><div class="skill-box"><div class="skill">🛢️ MySQL</div></div></div>
+<div><div class="tab">Data Analysis</div><div class="skill-box"><div class="skill">📊 Power BI</div><div class="skill">📈 Excel</div><div class="skill">🔢 NumPy</div><div class="skill">🐼 Pandas</div><div class="skill">📉 Matplotlib</div></div></div>
+<div><div class="tab">Tools</div><div class="skill-box"><div class="skill">🧰 Git</div><div class="skill">🐙 GitHub</div></div></div>
+</div>
+</section>
+
+<section id="projects" class="fade">
+<h2>PROJECTS</h2>
+<div class="card"><b>KBC Quiz Game:</b><p>Designed quiz application with game logic, score tracking, and audio feedback for correct/incorrect answers.</p></div>
+<div class="card"><b>Student Management System:</b><p>Developed application to efficiently manage student data and records.</p></div>
+</section>
+
+<section class="fade">
+<h2>ADDITIONAL INFORMATION</h2>
+<div class="card"><ul>
+<li><b>Languages:</b> English (fluent) , Hindi (Fluent)</li>
+<li><b>Communication Skills:</b> Effective communicator with strong interpersonal skills and English fluency. Skilled in conveying complex ideas clearly, active listening, and building effective collaboration within team settings.</li>
+<li><b>Problem-solving skills:</b> Applied strong problem-solving skills to analyze complex issues and implement efficient, practical solutions.</li>
+<li><b>Activities:</b> Volleyball & Badminton</li>
+<li><b>Crochet:</b>I enjoy crocheting as a creative hobby, where I turn simple yarn into unique handmade pieces. It reflects my patience, attention to detail, and ability to craft ideas into handmade designs.</li>
+</ul></div>
+</section>
+
+<section id="contact" class="fade">
+<h2>CONTACT</h2>
+<div class="contact">
+<p><i class="fa fa-envelope"></i> namranaeem24@gmail.com</p>
+<p>8368530189</p>
+<p>Bareilly, Uttar Pradesh</p>
+<a href="https://linkedin.com/in/namra-naeem-100929323" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://github.com/namra-24" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+</div>
+</section>
+
+<footer><p>© 2026 Namra Naeem</p></footer>
+
+<script>
+function toggleMode(){
+  const body=document.body;
+  const btn=document.getElementById('modeBtn');
+  body.classList.toggle('dark-mode');
+  if(body.classList.contains('dark-mode')){
+    btn.innerHTML='☀️ Light Mode';
+  }else{
+    btn.innerHTML='🌙 Dark Mode';
+  }
+}
+
+const faders=document.querySelectorAll('.fade');
+
+const checkVisibility = () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      el.classList.add('show');
+    }
+  });
+};
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('DOMContentLoaded', checkVisibility);
+</script>
+
+</body>
+</html>
