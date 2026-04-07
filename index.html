@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Namra Naeem Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -75,6 +75,34 @@ h2:hover{color:#f8a5c2}
 footer{text-align:center;padding:8px}
 
 @media(max-width:768px){.hero{flex-direction:column;text-align:center}}
+
+/* HOVER IMAGE FEATURE */
+.img-container{
+  position:relative;
+  display:inline-block;
+}
+
+.hover-text{
+  position:absolute;
+  bottom:-25px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#000;
+  font-family:'Playfair Display', serif;
+  font-size:16px;
+  opacity:0;
+  transition:0.3s;
+  pointer-events:none;
+}
+
+.img-container:hover .hover-text{
+  opacity:1;
+}
+
+/* DARK MODE FIX */
+.dark-mode .hover-text{
+  color:#fff;
+}
 </style>
 </head>
 
@@ -96,7 +124,12 @@ footer{text-align:center;padding:8px}
 <p>Motivated BCA (AI) student with a strong interest in web development and artificial intelligence. Proficient in coding fundamentals and fluent in English, with the ability to communicate ideas clearly. Possesses a solid foundation in problem-solving and a keen willingness to learn and apply technical skills in real-world projects.</p>
 <a href="resume.pdf" download class="btn">Download Resume</a>
 </div>
+
+<div class="img-container">
 <img src="profile.jpg">
+<div class="hover-text">Hey!👋🏻</div>
+</div>
+
 </section>
 
 <section id="skills" class="fade">
